@@ -14,9 +14,9 @@ window.onload = function () {
         });
   
         if (response.ok) {
-          const { jwt } = await response.json();
-          localStorage.setItem("jwt", jwt);
-          window.open("https://www.google.com", "_blank");
+          const { accessToken } = await response.json();
+          localStorage.setItem("jwt", accessToken);
+          window.open("index.html");
         } else {
           throw new Error("login failed");
         }

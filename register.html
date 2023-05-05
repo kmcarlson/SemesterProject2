@@ -17,7 +17,7 @@
       <div class="flex items-center">
         <input type="text" placeholder="Search" class="px-4 py-2 rounded-lg border-gray-300 mr-4">
         <a href="login.html" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Log in</a>
-        <a href="#" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4">Register</a>
+        <a href="register.html" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4">Register</a>
       </div>
     </nav>
     <ul class="flex">
@@ -37,18 +37,20 @@
   Etternavn:
 </pre>
 
-<form id="registration-form">
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username"><br>
+<form id="registration-form" class="bg-gray-100 px-6 py-8 rounded-lg shadow-md">
+  <h2 class="text-xl font-semibold mb-4">Register</h2>
+  <label for="username" class="block text-gray-700 font-semibold mb-2">Username:</label>
+  <input type="text" id="username" name="username" class="w-full py-2 px-3 mb-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" required>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email"><br>
+  <label for="email" class="block text-gray-700 font-semibold mb-2">Email:</label>
+  <input type="email" id="email" name="email" class="w-full py-2 px-3 mb-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" required>
 
-  <label for="password">Password:</label>
-  <input type="password" id="password" name="password"><br>
+  <label for="password" class="block text-gray-700 font-semibold mb-2">Password:</label>
+  <input type="password" id="password" name="password" class="w-full py-2 px-3 mb-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent" required>
 
-  <button type="submit">Register</button>
+  <button type="submit" class="bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-300">Register</button>
 </form>
+
 
       
       
