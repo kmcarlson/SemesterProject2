@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="dist/styles.css" />
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Tittel her</title>
+  <link rel="stylesheet" type="text/css" href="dist/styles.css" />
 </head>
-    <body class="bg-gray-500 bg-opacity-50">
-        <form id="login" class="flex flex-col">
-          <label for="email">email:</label>
-          <input
-            type="text"
-            placeholder="email"
-            id="email"
-            required
-          />
-          <br />
-          <label for="password">Password:</label>
-          <input
-            type="password"
-            placeholder="Password"
-            id="password"
-            required
-          />
-          <br />
-          <button>
 
-            Login
-          </button>
-        </form>
-    
-        <script src="src/js/index.js"></script>
-      </body>
-      
+<header>
+    <nav class="flex justify-between items-center py-4">
+        <div class="flex items-center">
+          <img src="logo.png" alt="Logo" class="h-10 mr-4">
+          <h1 class="text-xl font-bold">My Website</h1>
+        </div>
+        <div class="flex items-center">
+          <input type="text" placeholder="Search" class="px-4 py-2 rounded-lg border-gray-300 mr-4">
+          <a href="login.html" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Log in</a>
+          <a href="#" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4">Register</a>
+        </div>
+      </nav>
+      <ul class="flex">
+        <li class="mr-6"><a href="#">Link 1</a></li>
+        <li class="mr-6"><a href="#">Link 2</a></li>
+        <li class="mr-6"><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+      </ul>
+</header>
+
+<body class="bg-gray-500 bg-opacity-50">
+
+
+  <div class="slider relative h-64">
+    <img src="https://picsum.photos/id/1018/1500/1000" alt="Bilde 1" class="absolute top-0 left-0 w-full h-full object-cover opacity-100 transition-opacity duration-500">
+    <img src="https://picsum.photos/id/1043/1500/1000" alt="Bilde 2" class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500">
+    <img src="https://picsum.photos/id/1060/1500/1000" alt="Bilde 3" class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500">
+  </div>
+  
+  <script src="src/js/index.js"></script>
+
+</body>
 </html>
