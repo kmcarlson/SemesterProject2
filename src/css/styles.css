@@ -11,3 +11,14 @@
   top: 0;
   left: 0;
 }
+
+
+#auction-listings {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#auction-listings > li {
+  width: calc(100% / 5);
+  padding: 1rem;
+}
