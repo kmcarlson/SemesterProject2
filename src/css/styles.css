@@ -13,12 +13,18 @@
 }
 
 
-#auction-listings {
+/* #auction-listings {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
-#auction-listings > li {
+/* #auction-listings > li {
   width: calc(100% / 5);
   padding: 1rem;
+} */
+
+.listing-box {
+  border: 1px solid gray;
+  padding: 1rem;
 }
+

@@ -1,5 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  purge: {
+    options: {
+      safelist: [
+        'hidden', // Make sure it's specified exactly like this
+      ],
+    },
+  },
   content: [
     './src/**/*.html',
     './*.html',
