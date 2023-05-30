@@ -1,21 +1,12 @@
-const images = document.querySelectorAll(".slider img");
-let currentImage = 0;
-
-setInterval(() => {
-  images[currentImage].style.opacity = 0;
-  currentImage = (currentImage + 1) % images.length;
-  images[currentImage].style.opacity = 1;
-}, 3000);
-
 const btnLogin = document.getElementById("btnLogin");
 const btnRegister = document.getElementById("btnRegister");
 const btnProfile = document.getElementById("btnProfile");
 const btnLogout = document.getElementById("btnLogout");
 
-btnLogout.onclick = function() {
+btnLogout.onclick = function () {
   localStorage.removeItem("jwt");
   location.reload();
-}
+};
 
 if (localStorage.getItem("jwt")) {
   btnLogin.classList.add("hidden");
