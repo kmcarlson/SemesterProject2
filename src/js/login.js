@@ -16,7 +16,7 @@ window.onload = function () {
         if (response.ok) {
           const { accessToken } = await response.json();
           localStorage.setItem("jwt", accessToken);
-          window.open("index.html");
+          window.open("profil.html");
         } else {
           throw new Error("login failed");
         }
