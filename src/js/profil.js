@@ -19,7 +19,6 @@ if (token && user) {
           <p class="text-lg mb-2">Email: ${data.email}</p>
           <p class="text-lg mb-2">Credits: ${data.credits}</p>
           <img src="${data.avatar}" alt="Avatar" class="w-32 h-32 rounded-full object-cover mb-4" />
-          
         </div>
       `;
       
