@@ -7,7 +7,9 @@
   </head>
 
   <header>
-    <nav class="flex justify-between items-center py-4">
+    <nav
+      class="flex flex-col justify-between items-center py-4 sm:flex-row sm:space-y-0 sm:space-x-4"
+    >
       <div class="flex items-center">
         <img src="logo.png" alt="Logo" class="h-10 mr-4" />
         <h1 class="text-xl font-bold">My Website</h1>
@@ -16,13 +18,13 @@
         <input
           type="text"
           placeholder="Search"
-          class="px-4 py-2 rounded-lg border-gray-300 mr-4"
+          class="px-4 py-2 rounded-lg border-gray-300 mr-4 w-full sm:w-auto"
         />
         <a
           id="btnLogin"
           href="login.html"
-          class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
-          >Log in</a
+          class="bg-blue-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg sm:w-auto"
+          >Logg in</a
         >
         <a
           id="btnRegister"
@@ -46,7 +48,8 @@
         </button>
       </div>
     </nav>
-    <ul class="flex">
+
+    <ul class="flex flex-row justify-center">
       <li class="mr-6"><a href="listing.html">Listing</a></li>
       <li class="mr-6"><a href="#">Link 2</a></li>
       <li class="mr-6"><a href="#">Link 3</a></li>
@@ -55,11 +58,7 @@
   </header>
 
   <body class="bg-gray-500 bg-opacity-50">
-
-
-        <div id="dataContainer" class="container mx-auto">
-    
-    </div>
+    <div id="dataContainer" class="container mx-auto"></div>
 
     <footer class="bg-gray-900 text-gray-300 py-8">
       <div class="container mx-auto flex flex-wrap justify-between">
