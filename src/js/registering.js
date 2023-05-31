@@ -1,32 +1,28 @@
-const form = document.getElementById('registration-form');
+const form = document.getElementById("registration-form");
 
-form.addEventListener('submit', (event) => {
+form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const username = document.getElementById('username').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+  const username = document.getElementById("username").value;
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-  fetch('https://api.noroff.dev/api/v1/auction/auth/register', {
-    method: 'POST',
+  fetch("https://api.noroff.dev/api/v1/auction/auth/register", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       name: username,
       email: email,
-      password: password
+      password: password,
+    }),
+  })
+    .then((response) => {
+      if (response.status === 201) {
+        window.open("login.html");
+      } else {
+      }
     })
-  })
-  .then(response => {
-    if (response.status === 201) {
-      console.log("NICE")
-      window.open("login.html");
-    } else {
-      // Handle error response
-    }
-  })
-  .catch(error => {
-    // Handle network error
-  });
+    .catch((error) => {});
 });
