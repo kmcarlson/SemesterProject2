@@ -5,6 +5,7 @@ const btnLogout = document.getElementById("btnLogout");
 
 btnLogout.onclick = function () {
   localStorage.removeItem("jwt");
+  localStorage.removeItem("user");
   location.reload();
 };
 
