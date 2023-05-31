@@ -21,6 +21,7 @@ form.addEventListener('submit', (event) => {
   .then(response => {
     if (response.status === 201) {
       console.log("NICE")
+      window.open("login.html");
     } else {
       // Handle error response
     }
