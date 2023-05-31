@@ -1,10 +1,8 @@
 const token = localStorage.getItem("jwt");
+const user = localStorage.getItem("user");
 
-
-if (token) {
-
-  const apiUrl = "https://api.noroff.dev/api/v1/auction/profiles";
-
+if (token && user) {
+  const apiUrl = `https://api.noroff.dev/api/v1/auction/profiles/${user}`;
 
   fetch(apiUrl, {
     method: "GET",
@@ -14,7 +12,6 @@ if (token) {
   })
     .then((response) => response.json())
     .then((data) => {
-      //data
       console.log(data);
     })
     .catch((error) => {
