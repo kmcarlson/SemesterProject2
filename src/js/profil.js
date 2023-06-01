@@ -38,7 +38,7 @@ if (token && user) {
       avatarBtn.addEventListener("click", () => {
         const newAvatarUrl = avatarUrlInput.value.trim();
         if (newAvatarUrl) {
-          const updateUrl = `https://api.noroff.dev/api/v1/auction/profiles/${user}`;
+          const updateUrl = `https://api.noroff.dev/api/v1/auction/profiles/${user}/media`;
 
           fetch(updateUrl, {
             method: "PUT",
@@ -52,6 +52,7 @@ if (token && user) {
           })
             .then((response) => response.json())
             .then((data) => {
+              console.log(data,data.avatar)
               avatarImg.src = data.avatar;
               console.log("Avatar changed successfully.");
             })
