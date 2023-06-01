@@ -83,9 +83,13 @@ if (token && user) {
                 (listing) => `
                   <div class="bg-white shadow rounded-lg p-8 mb-4">
                     <h2 class="text-2xl font-bold mb-4">Title: ${listing.title}</h2>
+                    <p class="text-2xl font-bold mb-4">ID: ${listing.id}</p>
                     <p class="text-lg mb-2">Description: ${listing.description}</p>
-                    <p class="text-lg mb-2">Price: ${listing.price}</p>
-                    <p class="text-lg mb-2">Category: ${listing.category}</p>
+                    <p class="text-lg mb-2">Tags: ${listing.tags}</p>
+                    <p class="text-lg mb-2">Media: ${listing.media}</p>
+                    <p class="text-lg mb-2">Ends At: ${listing.endsAt}</p>
+                    <p class="text-lg mb-2">Bids: ${listing._count.bids}</p>
+                   
                   </div>
                 `
               )
