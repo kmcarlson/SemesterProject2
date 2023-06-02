@@ -748,10 +748,6 @@ video {
   border-width: 2px;
 }
 
-.border-solid {
-  border-style: solid;
-}
-
 .border-gray-300 {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));

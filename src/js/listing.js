@@ -11,11 +11,7 @@ fetch(auctionListingsUrl)
     let listings = data;
 
     let auctionListingsElement = document.getElementById("auction-listings");
-    // auctionListingsElement.classList.add("grid");
-    // auctionListingsElement.classList.add("grid-cols-1");
-    // auctionListingsElement.classList.add("md:grid-cols-2");
-    // auctionListingsElement.classList.add("lg:grid-cols-3");
-    // auctionListingsElement.classList.add("gap-4");
+
 
     listings.forEach((listing) => {
       let listItem = document.createElement("li");
