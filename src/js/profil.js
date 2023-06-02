@@ -63,9 +63,9 @@ if (token && user) {
           })
             .then((response) => response.json())
             .then((data) => {
-              console.log(data, data.avatar);
+              // console.log(data, data.avatar);
               avatarImg.src = data.avatar;
-              console.log("Avatar changed successfully.");
+              // console.log("Avatar changed successfully.");
             })
             .catch((error) => {
               console.error(
@@ -93,11 +93,13 @@ if (token && user) {
       })
         .then((response) => response.json())
         .then((data) => {
+          
           const listDataContainer =
             document.getElementById("listDataContainer");
 
           if (data.length > 0) {
             const listingsHTML = data
+            
 
               .map(
                 (listing) => `
