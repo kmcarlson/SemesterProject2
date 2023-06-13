@@ -23,13 +23,13 @@ fetch(auctionListingsUrl)
       listItem.classList.add("shadow-md");
 
       // ID
-      let idElement = document.createElement("p");
-      idElement.textContent = `ID: ${listing.id}`;
-      idElement.classList.add("text-gray-600");
-      listItem.appendChild(idElement);
+      // let idElement = document.createElement("p");
+      // idElement.textContent = `ID: ${listing.id}`;
+      // idElement.classList.add("text-gray-600");
+      // listItem.appendChild(idElement);
 
       // Title
-      let titleElement = document.createElement("p");
+      let titleElement = document.createElement("h2");
       titleElement.textContent = `Title: ${listing.title}`;
       listItem.appendChild(titleElement);
 
