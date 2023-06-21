@@ -41,7 +41,6 @@ if (token && user) {
       const avatarBtn = document.getElementById("avatarBtn");
       const createBtn = document.getElementById("createBtn");
 
-
       createBtn.addEventListener("click", function () {
         window.location.href = "createlisting.html";
       });
@@ -63,9 +62,7 @@ if (token && user) {
           })
             .then((response) => response.json())
             .then((data) => {
-              // console.log(data, data.avatar);
               avatarImg.src = data.avatar;
-              // console.log("Avatar changed successfully.");
             })
             .catch((error) => {
               console.error(
@@ -80,11 +77,6 @@ if (token && user) {
 
       const listingsApiUrl = `https://api.noroff.dev/api/v1/auction/profiles/${user}/listings`;
 
-   
-
-    
-
-
       fetch(listingsApiUrl, {
         method: "GET",
         headers: {
@@ -93,24 +85,16 @@ if (token && user) {
       })
         .then((response) => response.json())
         .then((data) => {
-          
-          const listDataContainer =
-            document.getElementById("listDataContainer");
+          const listDataContainer = document.getElementById("listDataContainer");
 
           if (data.length > 0) {
             const listingsHTML = data
-            
-
               .map(
                 (listing) => `
                   <div class="bg-white shadow rounded-lg p-8 mb-4 pl-2">
-                    <h2 class="text-2xl font-bold mb-4">Title: ${
-                      listing.title
-                    }</h2>
+                    <h2 class="text-2xl font-bold mb-4">Title: ${listing.title}</h2>
                     <p class="text-2xl font-bold mb-4">ID: ${listing.id}</p>
-                    <p class="text-lg mb-2">Description: ${
-                      listing.description
-                    }</p>
+                    <p class="text-lg mb-2">Description: ${listing.description}</p>
                     <p class="text-lg mb-2">Tags: ${listing.tags}</p>
                     <p class="text-lg mb-2">Media: ${listing.media}</p>
                     ${
@@ -120,22 +104,20 @@ if (token && user) {
                     }
                     <p class="text-lg mb-2">Ends At: ${listing.endsAt}</p>
                     <p class="text-lg mb-2">Bids: ${listing._count.bids}</p>
-            <button id="updateBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg mt-4 mb-4">Update listing</button>
-
-                   
+                    <button id="updateBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg mt-4 mb-4">Update listing</button>
                   </div>
                 `
               )
               .join("");
 
-
-        
-
             listDataContainer.innerHTML = listingsHTML;
-            console.log(data);
+
+            const updateBtn = document.getElementById("updateBtn");
+            updateBtn.addEventListener("click", () => {
+              window.location.href = "update.html"; 
+            });
           } else {
-            listDataContainer.innerHTML =
-              "<p class='text-lg'>No listings found.</p>";
+            listDataContainer.innerHTML = "<p class='text-lg'>No listings found.</p>";
           }
         })
         .catch((error) => {
