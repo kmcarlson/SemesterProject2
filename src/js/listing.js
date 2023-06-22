@@ -1,4 +1,4 @@
-const auctionListingsUrl = "https://api.noroff.dev/api/v1/auction/listings";
+const auctionListingsUrl = "https://api.noroff.dev/api/v1/auction/listings?_active=true&_seller=true&_bids=true";
 const token = localStorage.getItem("jwt");
 
 fetch(auctionListingsUrl)
@@ -10,6 +10,8 @@ fetch(auctionListingsUrl)
   })
   .then((data) => {
     let listings = data;
+
+   
 
     let auctionListingsElement = document.getElementById("auction-listings");
 
@@ -32,6 +34,8 @@ fetch(auctionListingsUrl)
         mediaElement.src = listing.media[0].trim();
         listItem.appendChild(mediaElement);
       }
+      
+      console.log(listing.bids)
 
       let descriptionElement = document.createElement("p");
       descriptionElement.textContent = `Description: ${listing.description}`;
@@ -59,15 +63,21 @@ fetch(auctionListingsUrl)
       bidsElement.textContent = `Bids: ${listing._count.bids}`;
       listItem.appendChild(bidsElement);
 
+      let amountElement = document.createElement("p");
+      amountElement.textContent = `Amount: ${listing.bids[listing.bids.length-1].amount}`;
+      listItem.appendChild(amountElement);
+
+      console.log('test',listing.bids[listing.bids.length-1].amount)
+
       let bidAmountInput = document.createElement("input");
       bidAmountInput.type = "number";
-      bidAmountInput.placeholder = "Enter bid amount";
+      bidAmountInput.placeholder = "Enter your bid";
       listItem.appendChild(bidAmountInput);
 
       let bidButton = document.createElement("button");
       bidButton.textContent = "Bid";
       bidButton.addEventListener("click", () => {
-        let bidAmount = bidAmountInput.value;
+        let bidAmount = parseInt(bidAmountInput.value);
         bidOnListing(listing.id, bidAmount);
       });
       listItem.appendChild(bidButton);
