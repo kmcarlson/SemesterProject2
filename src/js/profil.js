@@ -105,6 +105,7 @@ if (token && user) {
                     <p class="text-lg mb-2">Ends At: ${listing.endsAt}</p>
                     <p class="text-lg mb-2">Bids: ${listing._count.bids}</p>
                     <button id="updateBtn" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg mt-4 mb-4">Update listing</button>
+                    <button id="deleteBtn" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg mt-4 mb-4">Delete listing</button>
                   </div>
                 `
               )
@@ -112,9 +113,36 @@ if (token && user) {
 
             listDataContainer.innerHTML = listingsHTML;
 
-            const updateBtn = document.getElementById("updateBtn");
-            updateBtn.addEventListener("click", () => {
-              window.location.href = "update.html"; 
+            const updateBtns = document.querySelectorAll("#updateBtn");
+            updateBtns.forEach((updateBtn) => {
+              updateBtn.addEventListener("click", () => {
+                window.location.href = "update.html";
+              });
+            });
+
+            const deleteBtns = document.querySelectorAll("#deleteBtn");
+            deleteBtns.forEach((deleteBtn, index) => {
+              deleteBtn.addEventListener("click", () => {
+                const deleteUrl = `https://api.noroff.dev/api/v1/auction/listings/${data[index].id}`;
+
+                fetch(deleteUrl, {
+                  method: "DELETE",
+                  headers: {
+                    Authorization: `Bearer ${token}`,
+                  },
+                })
+                  .then((response) => {
+                    if (response.ok) {
+                      alert("Listing deleted successfully.");
+                      location.reload();
+                    } else {
+                      console.error("Failed to delete listing.");
+                    }
+                  })
+                  .catch((error) => {
+                    console.error("An error occurred while deleting the listing:", error);
+                  });
+              });
             });
           } else {
             listDataContainer.innerHTML = "<p class='text-lg'>No listings found.</p>";

@@ -35,7 +35,7 @@ fetch(auctionListingsUrl)
         listItem.appendChild(mediaElement);
       }
       
-      console.log(listing.bids)
+      console.log(listing) 
 
       let descriptionElement = document.createElement("p");
       descriptionElement.textContent = `Description: ${listing.description}`;
@@ -63,11 +63,14 @@ fetch(auctionListingsUrl)
       bidsElement.textContent = `Bids: ${listing._count.bids}`;
       listItem.appendChild(bidsElement);
 
+  
+
+
       let amountElement = document.createElement("p");
-      amountElement.textContent = `Amount: ${listing.bids[listing.bids.length-1].amount}`;
+      amountElement.textContent = `Amount: ${listing.bids[listing.bids.length-1]?.amount}`;
       listItem.appendChild(amountElement);
 
-      console.log('test',listing.bids[listing.bids.length-1].amount)
+   
 
       let bidAmountInput = document.createElement("input");
       bidAmountInput.type = "number";

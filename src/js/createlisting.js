@@ -16,8 +16,8 @@ if (token && user) {
     const description = document.getElementById("description").value;
     const media = document.getElementById("media").value;
 
-    if (!isValidURL(media)) {
-      console.error("Ugyldig media-URL");
+    if (!media || !isValidURL(media)) {
+      alert("URL eller bilde mangler");
       return;
     }
 
