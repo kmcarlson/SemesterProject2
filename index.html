@@ -4,60 +4,64 @@
     <meta charset="UTF-8" />
     <title>Auction House - Home</title>
     <link rel="stylesheet" type="text/css" href="dist/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-
-  <header>
-    <nav
-      class="flex flex-col justify-between items-center py-4 sm:flex-row sm:space-y-0 sm:space-x-4"
-    >
-      <div class="flex items-center">
-        <img src="./src/img/logo-no-background.svg" alt="AH" class="logo w-20 h-auto sm:w-48 md:w-64"/>
-        <h1 class="text-xl font-bold">Auction House</h1>
+  <body>
+    <header class="bg-gray-900 text-gray-100 py-4">
+      <div class="container mx-auto flex items-center justify-between px-4">
+        <div class="flex items-center">
+          <img
+            src="./src/img/logo-no-background.svg"
+            alt="AH"
+            class="logo w-20 h-auto sm:w-48 md:w-64"
+          />
+          <h1 class="text-xl font-bold">Auction House</h1>
+        </div>
+        <div class="flex items-center">
+          <input
+            type="text"
+            placeholder="Search"
+            class="px-4 py-2 rounded-lg border-gray-300 mr-4 w-full sm:w-auto"
+          />
+          <a
+            id="btnLogin"
+            href="login.html"
+            class="bg-blue-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg sm:w-auto"
+            >Logg in</a
+          >
+          <a
+            id="btnRegister"
+            href="register.html"
+            class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4"
+            >Register</a
+          >
+          <a
+            id="btnProfile"
+            href="profil.html"
+            class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4"
+          >
+            Min side
+          </a>
+          <a
+            id="btnLogout"
+            href="index.html"
+            class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4"
+          >
+            Logg ut
+          </a>
+        </div>
       </div>
-      <div class="flex items-center">
-        <input
-          type="text"
-          placeholder="Search"
-          class="px-4 py-2 rounded-lg border-gray-300 mr-4 w-full sm:w-auto"
-        />
-        <a
-          id="btnLogin"
-          href="login.html"
-          class="bg-blue-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg sm:w-auto"
-          >Logg in</a
-        >
-        <a
-          id="btnRegister"
-          href="register.html"
-          class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4"
-          >Register</a
-        >
-        <button
-          id="btnProfile"
-          href="profil.html"
-          class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4"
-        >
-          Min side
-        </button>
-        <button
-          id="btnLogout"
-          href="register.html"
-          class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4"
-        >
-          Logg ut
-        </button>
-      </div>
-    </nav>
+      <ul class="flex justify-center">
+        <li class="mr-6"><a href="listing.html">Listing</a></li>
+        <li class="mr-6"><a href="#">Link 2</a></li>
+        <li class="mr-6"><a href="#">Link 3</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </header>
 
-    <ul class="flex flex-row justify-center">
-      <li class="mr-6"><a href="listing.html">Listing</a></li>
-      <li class="mr-6"><a href="#">Link 2</a></li>
-      <li class="mr-6"><a href="#">Link 3</a></li>
-      <li><a href="index.html">Home</a></li>
-    </ul>
-  </header>
-
-  <body class="bg-gray-500 bg-opacity-50">
     <div class="slider relative h-64">
       <img
         src="https://picsum.photos/id/1018/1500/1000"
@@ -83,29 +87,41 @@
           <!-- Article 1 -->
           <div class="bg-white rounded-lg p-6">
             <h3 class="text-xl font-bold mb-4">Artikkel 1</h3>
-            <img src="https://via.placeholder.com/400" alt="Artikkelbilde 1" class="mb-4">
+            <img
+              src="https://via.placeholder.com/400"
+              alt="Artikkelbilde 1"
+              class="mb-4"
+            />
             <p class="text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
               id lectus nec tellus consectetur commodo. Vestibulum eget ligula
               vitae felis sollicitudin auctor.
             </p>
           </div>
-    
+
           <!-- Article 2 -->
           <div class="bg-white rounded-lg p-6">
             <h3 class="text-xl font-bold mb-4">Artikkel 2</h3>
-            <img src="https://via.placeholder.com/400" alt="Artikkelbilde 2" class="mb-4">
+            <img
+              src="https://via.placeholder.com/400"
+              alt="Artikkelbilde 2"
+              class="mb-4"
+            />
             <p class="text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
               id lectus nec tellus consectetur commodo. Vestibulum eget ligula
               vitae felis sollicitudin auctor.
             </p>
           </div>
-    
+
           <!-- Article 3 -->
           <div class="bg-white rounded-lg p-6">
             <h3 class="text-xl font-bold mb-4">Artikkel 3</h3>
-            <img src="https://via.placeholder.com/400" alt="Artikkelbilde 3" class="mb-4">
+            <img
+              src="https://via.placeholder.com/400"
+              alt="Artikkelbilde 3"
+              class="mb-4"
+            />
             <p class="text-sm">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
               id lectus nec tellus consectetur commodo. Vestibulum eget ligula
@@ -115,8 +131,7 @@
         </div>
       </div>
     </section>
-    
-  
+
     <section class="bg-gray-300 py-8 px-4">
       <div class="container mx-auto">
         <h2 class="text-3xl font-bold mb-8 text-center">Informasjon</h2>
@@ -130,12 +145,15 @@
           </div>
           <div class="bg-white rounded-lg p-6">
             <h3 class="text-xl font-bold mb-4">Bilde</h3>
-            <img src="https://via.placeholder.com/400" alt="Bilde" class="w-full">
+            <img
+              src="https://via.placeholder.com/400"
+              alt="Bilde"
+              class="w-full"
+            />
           </div>
         </div>
       </div>
     </section>
-    
 
     <footer class="bg-gray-900 text-gray-300 py-8 px-4 sm:text-left">
       <div class="container mx-auto flex flex-wrap justify-between">

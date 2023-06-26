@@ -7,55 +7,115 @@
     <link rel="stylesheet" type="text/css" href="dist/styles.css" />
     <title>Document</title>
   </head>
-
-  <header>
-    <nav class="flex flex-col justify-between items-center py-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-      <div class="flex items-center">
-        <img src="./src/img/logo-no-background.svg" alt="AH" class="logo w-20 h-auto sm:w-48 md:w-64"/>
-        <h1 class="text-xl font-bold">Auction House</h1>
+  <body>
+    <header class="bg-gray-900 text-gray-100 py-4">
+      <div class="container mx-auto flex items-center justify-between px-4">
+        <div class="flex items-center">
+          <img
+            src="./src/img/logo-no-background.svg"
+            alt="AH"
+            class="logo w-20 h-auto sm:w-48 md:w-64"
+          />
+          <h1 class="text-xl font-bold">Auction House</h1>
+        </div>
+        <div class="flex items-center">
+          <input
+            type="text"
+            placeholder="Search"
+            class="px-4 py-2 rounded-lg border-gray-300 mr-4 w-full sm:w-auto"
+          />
+          <a
+            id="btnLogin"
+            href="login.html"
+            class="bg-blue-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg sm:w-auto"
+            >Logg in</a
+          >
+          <a
+            id="btnRegister"
+            href="register.html"
+            class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4"
+            >Register</a
+          >
+          <button
+            id="btnProfile"
+            href="profil.html"
+            class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4"
+          >
+            Min side
+          </button>
+          <button
+            id="btnLogout"
+            href="register.html"
+            class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4"
+          >
+            Logg ut
+          </button>
+        </div>
       </div>
-      <div class="flex items-center">
-        <input type="text" placeholder="Search" class="px-4 py-2 rounded-lg border-gray-300 mr-4 w-full sm:w-auto" />
-        <a id="btnLogin" href="login.html" class="bg-blue-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg sm:w-auto">Logg in</a>
-        <a id="btnRegister" href="register.html" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4">Register</a>
-        <button id="btnProfile" href="profil.html" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4">Min side</button>
-        <button id="btnLogout" href="register.html" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded-lg ml-4">Logg ut</button>
-      </div>
-    </nav>
-
-    <ul class="flex flex-row justify-center">
-      <li class="mr-6"><a href="listing.html">Listing</a></li>
-      <li class="mr-6"><a href="createlisting.html">Create new item</a></li>
-      <li class="mr-6"><a href="#">Link 3</a></li>
-      <li><a href="index.html">Home</a></li>
-    </ul>
-  </header>
-
-  <body class="bg-gray-500 bg-opacity-50">
+      <ul class="flex justify-center">
+        <li class="mr-6"><a href="listing.html">Listing</a></li>
+        <li class="mr-6"><a href="#">Link 2</a></li>
+        <li class="mr-6"><a href="#">Link 3</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </header>
 
     <div id="listDataContainer" class="container mx-auto mt-8 mb-8">
       <h2 class="text-2xl mb-4">Create Listing</h2>
       <form id="listingForm" class="bg-white p-4 shadow rounded">
         <div class="mb-4">
-          <label for="title" class="block font-bold mb-2 text-gray-800">Title:</label>
-          <input type="text" id="title" name="title" required class="px-4 py-2 rounded-lg border border-gray-300 w-full">
+          <label for="title" class="block font-bold mb-2 text-gray-800"
+            >Title:</label
+          >
+          <input
+            type="text"
+            id="title"
+            name="title"
+            required
+            class="px-4 py-2 rounded-lg border border-gray-300 w-full"
+          />
         </div>
         <div class="mb-4">
-          <label for="endsAt" class="block font-bold mb-2 text-gray-800">Ends At:</label>
-          <input type="datetime-local" id="endsAt" name="endsAt" required class="px-4 py-2 rounded-lg border border-gray-300 w-full">
+          <label for="endsAt" class="block font-bold mb-2 text-gray-800"
+            >Ends At:</label
+          >
+          <input
+            type="datetime-local"
+            id="endsAt"
+            name="endsAt"
+            required
+            class="px-4 py-2 rounded-lg border border-gray-300 w-full"
+          />
         </div>
         <div class="mb-4">
-          <label for="description" class="block font-bold mb-2 text-gray-800">Description:</label>
-          <textarea id="description" name="description" class="px-4 py-2 rounded-lg border border-gray-300 w-full"></textarea>
+          <label for="description" class="block font-bold mb-2 text-gray-800"
+            >Description:</label
+          >
+          <textarea
+            id="description"
+            name="description"
+            class="px-4 py-2 rounded-lg border border-gray-300 w-full"
+          ></textarea>
         </div>
         <div class="mb-4">
-          <label for="media" class="block font-bold mb-2 text-gray-800">Media:</label>
-          <input type="text" id="media" name="media" class="px-4 py-2 rounded-lg border border-gray-300 w-full">
+          <label for="media" class="block font-bold mb-2 text-gray-800"
+            >Media:</label
+          >
+          <input
+            type="text"
+            id="media"
+            name="media"
+            class="px-4 py-2 rounded-lg border border-gray-300 w-full"
+          />
         </div>
-        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Create Listing</button>
+        <button
+          type="submit"
+          class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
+        >
+          Create Listing
+        </button>
       </form>
     </div>
-    
 
     <footer class="bg-gray-900 text-gray-300 py-8 px-4 sm:text-left">
       <div class="container mx-auto flex flex-wrap justify-between">
@@ -90,7 +150,7 @@
       </div>
     </footer>
 
-  <script src="src/js/index.js"></script>
-  <script src="src/js/createlisting.js"></script>
-</body>
+    <script src="src/js/index.js"></script>
+    <script src="src/js/createlisting.js"></script>
+  </body>
 </html>
