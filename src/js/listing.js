@@ -1,4 +1,5 @@
-const auctionListingsUrl = "https://api.noroff.dev/api/v1/auction/listings?_active=true&_seller=true&_bids=true";
+const auctionListingsUrl =
+  "https://api.noroff.dev/api/v1/auction/listings?_active=true&_seller=true&_bids=true";
 const token = localStorage.getItem("jwt");
 
 fetch(auctionListingsUrl)
@@ -10,8 +11,6 @@ fetch(auctionListingsUrl)
   })
   .then((data) => {
     let listings = data;
-
-   
 
     let auctionListingsElement = document.getElementById("auction-listings");
 
@@ -34,8 +33,8 @@ fetch(auctionListingsUrl)
         mediaElement.src = listing.media[0].trim();
         listItem.appendChild(mediaElement);
       }
-      
-      console.log(listing) 
+
+      console.log(listing);
 
       let descriptionElement = document.createElement("p");
       descriptionElement.textContent = `Description: ${listing.description}`;
@@ -63,22 +62,28 @@ fetch(auctionListingsUrl)
       bidsElement.textContent = `Bids: ${listing._count.bids}`;
       listItem.appendChild(bidsElement);
 
-  
-
-
       let amountElement = document.createElement("p");
-      amountElement.textContent = `Amount: ${listing.bids[listing.bids.length-1]?.amount}`;
+      amountElement.textContent = `Amount: ${
+        listing.bids[listing.bids.length - 1]?.amount
+      }`;
       listItem.appendChild(amountElement);
-
-   
 
       let bidAmountInput = document.createElement("input");
       bidAmountInput.type = "number";
       bidAmountInput.placeholder = "Enter your bid";
+      bidAmountInput.style.width = "100%";
       listItem.appendChild(bidAmountInput);
 
       let bidButton = document.createElement("button");
       bidButton.textContent = "Bid";
+      bidButton.classList.add(
+        "bg-blue-500",
+        "hover:bg-blue-600",
+        "text-white",
+        "px-4",
+        "py-2",
+        "rounded-lg"
+      );
       bidButton.addEventListener("click", () => {
         let bidAmount = parseInt(bidAmountInput.value);
         bidOnListing(listing.id, bidAmount);
@@ -107,13 +112,14 @@ function bidOnListing(listingId, bidAmount) {
   })
     .then((response) => {
       if (!response.ok) {
+        alert("The bid is to low!");
         throw new Error("No for bid");
       }
       return response.json();
     })
     .then((data) => {
+      location.reload();
       console.log("Woho");
-     
     })
     .catch((error) => {
       console.error(error);
