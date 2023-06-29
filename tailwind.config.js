@@ -3,7 +3,10 @@ module.exports = {
   purge: {
     options: {
       safelist: [
-        'hidden', // Make sure it's specified exactly like this
+        'hidden',
+        'hover:cursor-pointer',
+        'text-red-600'
+         // Make sure it's specified exactly like this
       ],
     },
   },
