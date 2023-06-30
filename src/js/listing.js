@@ -50,11 +50,11 @@ function createListingElement(listing) {
   listItem.classList.add("shadow-md");
 
   const titleElement = document.createElement("h2");
-  titleElement.textContent = `Title: ${listing.title}`;
+  titleElement.textContent = `${listing.title}`;
   titleElement.addEventListener("click", () => {
     location.href = `prod.html?id=${listing.id}`;
   });
-  titleElement.classList.add("hover:cursor-pointer");
+  titleElement.classList.add("hover:cursor-pointer", "font-bold");
   listItem.appendChild(titleElement);
 
   const media = listing?.media[0];
