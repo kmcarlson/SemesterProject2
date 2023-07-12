@@ -103,8 +103,14 @@ function createListingElement(listing) {
     const bidAmountInput = document.createElement("input");
     bidAmountInput.type = "number";
     bidAmountInput.placeholder = "Enter your bid";
-    bidAmountInput.style.width = "100%";
+    // bidAmountInput.style.width = "100%";
+    // bidAmountInput.style.margin = "1.3rem";
     listItem.appendChild(bidAmountInput);
+    bidAmountInput.classList.add(
+      "w-full",
+      "my-2", 
+      "border-solid", 
+    )
 
     const bidButton = document.createElement("button");
     bidButton.textContent = "Bid";
@@ -114,7 +120,8 @@ function createListingElement(listing) {
       "text-white",
       "px-4",
       "py-2",
-      "rounded-lg"
+      "rounded-lg",
+      "w-full"
     );
     bidButton.addEventListener("click", () => {
       const bidAmount = parseInt(bidAmountInput.value);

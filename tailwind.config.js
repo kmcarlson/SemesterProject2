@@ -5,8 +5,10 @@ module.exports = {
       safelist: [
         'hidden',
         'hover:cursor-pointer',
-        'text-red-600'
-         // Make sure it's specified exactly like this
+        'text-red-600',
+        'my-2',
+        'border-solid',
+
       ],
     },
   },
