@@ -108,9 +108,10 @@ function createListingElement(listing) {
     listItem.appendChild(bidAmountInput);
     bidAmountInput.classList.add(
       "w-full",
-      "my-2", 
-      "border-solid", 
-    )
+      "my-2",
+      "border",
+      "border-black-300"
+    );
 
     const bidButton = document.createElement("button");
     bidButton.textContent = "Bid";
