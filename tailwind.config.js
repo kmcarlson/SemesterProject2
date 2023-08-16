@@ -22,6 +22,11 @@ module.exports = {
       colors: {
         'gray-dark': "rgba(40, 40, 40, var(--tw-bg-opacity, 1))",
       },
+      fontFamily: {
+        'roboto': ['Roboto', 'sans-serif'],
+        'merriweather': ['Merriweather', 'serif'],
+        'open-sans': ['Open Sans', 'sans-serif'],
+      },
     },
   },
   plugins: [],
