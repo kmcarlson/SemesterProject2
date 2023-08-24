@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="bg-gray-900 text-gray-100 py-4">
-      <div class="container mx-auto flex items-center justify-between px-4">
+      <div class="container mx-auto flex items-center justify-around md:justify-between px-4">
         <div class="flex items-center">
           <a href="index.html"
             ><img
@@ -21,7 +21,7 @@
               class="logo w-20 h-auto sm:w-48 md:w-64"
             />
           </a>
-          <h1 class="text-xl font-roboto font-bold">Auction House</h1>
+          <h1 class="text-xl font-roboto font-bold hidden md:block">Auction House</h1>
         </div>
         <div class="flex items-center">
 
@@ -61,23 +61,15 @@
       </ul>
     </header>
 
-    <div class="slider relative h-64">
+    <div class="relative h-64 flex">
       <img
         src="https://picsum.photos/id/1018/1500/1000"
         alt="Bilde 1"
-        class="absolute top-0 left-0 w-full h-full object-cover opacity-100 transition-opacity duration-500"
-      />
-      <img
-        src="https://picsum.photos/id/1043/1500/1000"
-        alt="Bilde 2"
-        class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500"
-      />
-      <img
-        src="https://picsum.photos/id/1060/1500/1000"
-        alt="Bilde 3"
-        class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500"
+        class="absolute top-0 left-0 w-full h-full object-cover opacity-100 transition-opacity duration-500 md:right-0"
       />
     </div>
+    
+    
 
     <section class="bg-gray-200 py-8 px-4">
       <div class="container mx-auto">
