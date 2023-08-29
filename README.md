@@ -17,7 +17,7 @@
 
 ## Description
 
-This is a web application for an auction house called AH or Auction House. The application is built with JavaScript and
+This AH or Auction House. The application is built with JavaScript and
 TailwindCSS. The application is responsive and works well on mobile, tablet, and desktop. 
 
 ## Built with
