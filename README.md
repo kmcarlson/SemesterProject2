@@ -9,7 +9,7 @@
 | Design Prototype  | [Figma](https://www.figma.com/file/wQWGFc5RJiLObyOwJV16Qm/Semester-2?type=design&t=dYeQxrlAIFTUSesD-6) |                                                                                                                                                                                                                     |
 | Kanban Board      | ([Link Trello](https://www.vg.no/))  
 | Repository      | [GitHub](https://github.com/kmcarlson/SemesterProject2)     
-| Hosted Demo      | [netlify](https://fantastic-clafoutis-8485f4.netlify.app/)                                                                                                                                                                               |
+| Hosted Demo      | [Netlify](https://fantastic-clafoutis-8485f4.netlify.app/)                                                                                                                                                                               |
 
 
 
