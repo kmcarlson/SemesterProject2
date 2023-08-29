@@ -5,8 +5,8 @@
 
 | Resources   | URLs                                                                                                                                                       |
 |:------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Style Guide  | [Figma](https://www.figma.com/file/mSHJhc2sb2fu3D0rqbj1Ng/Semester-2?type=design&t=3ywRvB4zANTvX3Th-6 )                                           |
-| Design Prototype  | [Figma](https://www.figma.com/file/wQWGFc5RJiLObyOwJV16Qm/Semester-2?type=design&t=dYeQxrlAIFTUSesD-6) |                                                                                                                                                                                                                     |
+| Design Prototype   | [Prototype](https://www.figma.com/file/mSHJhc2sb2fu3D0rqbj1Ng/Semester-2?type=design&t=3ywRvB4zANTvX3Th-6 )                                           |
+| Style Guide   | [Style Guide](https://www.figma.com/file/wQWGFc5RJiLObyOwJV16Qm/Semester-2?type=design&t=dYeQxrlAIFTUSesD-6) |                                                                                                                                                                                                                     |
 | Kanban Board      | ([Link Trello](https://www.vg.no/))  
 | Repository      | [GitHub](https://github.com/kmcarlson/SemesterProject2)     
 | Hosted Demo      | [Netlify](https://fantastic-clafoutis-8485f4.netlify.app/)                                                                                                                                                                               |
