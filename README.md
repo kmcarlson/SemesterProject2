@@ -38,7 +38,7 @@ When a new user joins the website, they are given 1000 credits to use on the sit
 To run this, you first need to copy the link.
 
 ```
-link
+gh repo clone kmcarlson/SemesterProject2
 ```
 
 To build CSS
