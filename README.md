@@ -7,7 +7,7 @@
 |:------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Design Prototype   | [Prototype](https://www.figma.com/file/mSHJhc2sb2fu3D0rqbj1Ng/Semester-2?type=design&t=3ywRvB4zANTvX3Th-6 )                                           |
 | Style Guide   | [Style Guide](https://www.figma.com/file/wQWGFc5RJiLObyOwJV16Qm/Semester-2?type=design&t=dYeQxrlAIFTUSesD-6) |                                                                                                                                                                                                                     |
-| Kanban Board      | [Trello borad](https://trello.com/invite/b/bknzeMiZ/ATTIdda4141bbf864644ccd1c805412b51baEC791C09/semesterproject2)  
+| Kanban Board      | [Trello borad](https://trello.com/b/bknzeMiZ/semesterproject2)  
 | Repository      | [GitHub](https://github.com/kmcarlson/SemesterProject2)     
 | Hosted Demo      | [Netlify](https://fantastic-clafoutis-8485f4.netlify.app/)                                                                                                                                                                               |
 
