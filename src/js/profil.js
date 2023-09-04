@@ -85,16 +85,21 @@ if (token && user) {
       })
         .then((response) => response.json())
         .then((data) => {
-          const listDataContainer = document.getElementById("listDataContainer");
+          const listDataContainer =
+            document.getElementById("listDataContainer");
 
           if (data.length > 0) {
             const listingsHTML = data
               .map(
                 (listing) => `
                   <div class="bg-white shadow rounded-lg p-8 mb-4 pl-2">
-                    <h2 class="text-2xl font-bold mb-4">Title: ${listing.title}</h2>
+                    <h2 class="text-2xl font-bold mb-4">Title: ${
+                      listing.title
+                    }</h2>
                     <p class="text-2xl font-bold mb-4">ID: ${listing.id}</p>
-                    <p class="text-lg mb-2">Description: ${listing.description}</p>
+                    <p class="text-lg mb-2">Description: ${
+                      listing.description
+                    }</p>
                     <p class="text-lg mb-2">Tags: ${listing.tags}</p>
                     <p class="text-lg mb-2">Media: ${listing.media}</p>
                     ${
@@ -141,21 +146,25 @@ if (token && user) {
                     }
                   })
                   .catch((error) => {
-                    console.error("An error occurred while deleting the listing:", error);
+                    console.error(
+                      "An error occurred while deleting the listing:",
+                      error
+                    );
                   });
               });
             });
           } else {
-            listDataContainer.innerHTML = "<p class='text-lg'>No listings found.</p>";
+            listDataContainer.innerHTML =
+              "<p class='text-lg'>No listings found.</p>";
           }
         })
         .catch((error) => {
-          console.error("An error occurred while fetching data:", error);
+          console.error(error);
         });
     })
     .catch((error) => {
-      console.error("An error occurred while fetching data:", error);
+      console.error(error);
     });
 } else {
-  console.error("JWT token is not available in localStorage.");
+  console.error("??");
 }

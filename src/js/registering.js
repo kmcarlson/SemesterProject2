@@ -8,8 +8,8 @@ form.addEventListener("submit", (event) => {
   const password = document.getElementById("password").value;
   const errorMessage = document.getElementById("errorMsg");
 
-  if(errorMessage.children.length > 1){
-    errorMessage.innerHTML = ''
+  if (errorMessage.children.length > 1) {
+    errorMessage.innerHTML = "";
   }
 
   fetch("https://api.noroff.dev/api/v1/auction/auth/register", {
@@ -27,16 +27,16 @@ form.addEventListener("submit", (event) => {
       if (response.status === 201) {
         window.open("login.html");
       } else {
-        const {errors} = await response.json()
-        
+        const { errors } = await response.json();
+
         errors.forEach((error) => {
           errorMessage.innerHTML += `
           <p class="text-red-600">* ${error.message}</p>
-          `
-        })
+          `;
+        });
       }
     })
     .catch((error) => {
-      console.log(error)
+      console.log(error);
     });
 });
