@@ -41,12 +41,17 @@ To run this, you first need to copy the link.
 gh repo clone kmcarlson/SemesterProject2
 ```
 
+To see, either open the index file, or use the live server (ALT + L ALT+O), if you don't have a live server and want to use it:
+
+Install live server
+
+```
+npm install -g live-server
+```
+
 To build CSS
 
 ```
-
-
-
 npm install
 npm run dev
 ```
