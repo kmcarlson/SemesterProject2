@@ -22,21 +22,17 @@ form.addEventListener("submit", (event) => {
       email: email,
       password: password,
     }),
-  })
-    .then(async (response) => {
-      if (response.status === 201) {
-        window.open("login.html");
-      } else {
-        const { errors } = await response.json();
+  }).then(async (response) => {
+    if (response.status === 201) {
+      window.open("login.html");
+    } else {
+      const { errors } = await response.json();
 
-        errors.forEach((error) => {
-          errorMessage.innerHTML += `
-          <p class="text-red-600">* ${error.message}</p>
+      errors.forEach((error) => {
+        errorMessage.innerHTML += `
+          <p class="text-red-600 font-bold">* ${error.message}</p>
           `;
-        });
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+      });
+    }
+  });
 });
