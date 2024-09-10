@@ -1,6 +1,7 @@
 # Semester Project 2
 
 
+![semester](https://github.com/user-attachments/assets/edf5899e-50e6-4943-813a-29f77c97d7fd)
 
 
 | Resources   | URLs                                                                                                                                                       |
